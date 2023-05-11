@@ -11,3 +11,10 @@ public class Animal {
 		//monkey.whoAmI(); // Resulting message: "I am a monkey." (Dynamic method dispatch invokes the overridden method in Monkey class.)
 	}
 }
+
+class Cat extends Animal {
+	
+    public void whoAmI() {
+        System.out.println("I am an animal."); // Hiding: This method is hidden by the overridden method in the subclasses.
+    }
+}
