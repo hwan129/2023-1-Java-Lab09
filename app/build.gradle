@@ -33,7 +33,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'edu.handong.csee.java.ingeritance.App'
+    mainClass = 'edu.handong.csee.java.inheritance.Cat'
 }
 
 tasks.named('test') {
