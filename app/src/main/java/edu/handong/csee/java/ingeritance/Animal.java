@@ -5,10 +5,10 @@ package edu.handong.csee.java.ingeritance;
 public class Animal {
 	public void whoAmI() {
 		Animal dog = new Dog(); // Polymorphism: The 'dog' variable of type Animal can refer to an instance of Dog.
-		//Animal monkey = new Monkey(); // Polymorphism: The 'monkey' variable of type Animal can refer to an instance of Monkey.
+		Animal monkey = new Monkey(); // Polymorphism: The 'monkey' variable of type Animal can refer to an instance of Monkey.
 		
 		dog.whoAmI(); // Resulting message: "I am a dog." (Dynamic method dispatch invokes the overridden method in Dog class.)
-		//monkey.whoAmI(); // Resulting message: "I am a monkey." (Dynamic method dispatch invokes the overridden method in Monkey class.)
+		monkey.whoAmI(); // Resulting message: "I am a monkey." (Dynamic method dispatch invokes the overridden method in Monkey class.)
 	}
 }
 
@@ -23,5 +23,12 @@ class Dog extends Animal {
     @Override
     public void whoAmI() {
         System.out.println("I am a dog."); // Overriding: This method overrides the implementation in the superclass.
+    }
+}
+
+class Monkey extends Animal {
+    @Override
+    public void whoAmI() {
+        System.out.println("I am a monkey."); // Overriding: This method overrides the implementation in the superclass.
     }
 }
